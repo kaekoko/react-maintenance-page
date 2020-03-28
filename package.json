@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "dev": "webpack-dev-server --entry ./test --output-path ./dist",
     "build": "rm -rf ./lib && tsc",
     "prepare": "npm run build"
   },
@@ -30,7 +31,8 @@
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {}
 }

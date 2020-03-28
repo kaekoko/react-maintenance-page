@@ -1,9 +1,9 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   mode: "development",
 
-  // default to ./src but we move to test
+  // default to ./src but we move to ./test to avoid import with npm library
   entry: "./test",
 
   output: {
@@ -12,12 +12,23 @@ module.exports = {
     filename: "bundle.js",
   },
 
-  // Enable sourcemaps for debugging webpack's output.
+  // Enable sourcemaps for debugging webpack output.
   devtool: "source-map",
 
+  devServer: {
+    contentBase: __dirname, // path to let webserver serve the index.html
+    compress: false,
+    port: 9000,
+
+    // webpack-dev-server is not default generate output file to disk but it's work in memory
+    // when output and contentBase is difference so it will not generate output file in same path as contentBase
+    writeToDisk: true
+  },
+
   resolve: {
-      // Add '.ts' and '.tsx' as resolvable extensions.
-      extensions: [".ts", ".tsx"]
+      // Add ".ts" and ".tsx" as resolvable extensions.
+      // Add ".js" for webpack-dev-server
+      extensions: [".ts", ".tsx", ".js"],
   },
 
   module: {
@@ -31,7 +42,7 @@ module.exports = {
                   }
               ]
           },
-          // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+          // All output ".js" files will have any sourcemaps re-processed by "source-map-loader".
           {
               enforce: "pre",
               test: /\.js$/,
