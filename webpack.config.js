@@ -1,5 +1,16 @@
+const path = require('path');
+
 module.exports = {
-  mode: "production",
+  mode: "development",
+
+  // default to ./src but we move to test
+  entry: "./test",
+
+  output: {
+    // set output path to ./dist and file name bundle.js
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
 
   // Enable sourcemaps for debugging webpack's output.
   devtool: "source-map",

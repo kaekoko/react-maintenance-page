@@ -6,7 +6,7 @@ export interface MaintenancePageProps extends React.Props<MaintenancePage> {
 }
 
 export class MaintenancePage extends React.Component<MaintenancePageProps, any> {
-  renders() {
+  render() {
     return (
       <div style={{ color: this.props.color }}>
         Hello world!
