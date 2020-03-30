@@ -2,24 +2,22 @@
   "name": "maintenance-page",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "build/index.js",
   "scripts": {
-    "build": "rm -rf ./lib && tsc",
     "dev": "webpack-dev-server --entry ./test --output-path ./dist",
-    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}'",
-    "prepare": "npm run lint && npm run build"
+    "prepare": "npm run compile",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "gts check",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ]
   },
   "repository": {
     "type": "git",
@@ -38,21 +36,16 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@types/node": "^10.0.3",
     "@types/react": "^16.9.27",
     "@types/react-dom": "^16.9.5",
-    "@typescript-eslint/eslint-plugin": "^2.25.0",
-    "@typescript-eslint/parser": "^2.25.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.19.0",
+    "gts": "^1.1.2",
     "husky": "^4.2.3",
-    "prettier": "^2.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3",
+    "typescript": "~3.7.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"

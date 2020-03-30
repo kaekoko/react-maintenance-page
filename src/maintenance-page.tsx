@@ -1,11 +1,11 @@
-import * as React from "react"
+import * as React from 'react';
 
-export interface MaintenancePageProps extends React.Props<MaintenancePage> {
-  color: string
+export interface MaintenancePageProps {
+  color: string;
 }
 
 export interface MaintenancePageState {
-  animationTime: number
+  animationTime: number;
 }
 
 export class MaintenancePage extends React.Component<
@@ -13,25 +13,25 @@ export class MaintenancePage extends React.Component<
   MaintenancePageState
 > {
   constructor(props: MaintenancePageProps) {
-    super(props)
+    super(props);
     this.state = {
       animationTime: 0,
-    }
+    };
   }
 
   render() {
     return (
       <div
         style={{
-          backgroundColor: "#000",
-          height: "100%",
-          width: "100%",
-          position: "fixed",
-          color: "#fff",
+          backgroundColor: '#000',
+          height: '100%',
+          width: '100%',
+          position: 'fixed',
+          color: '#fff',
         }}
       >
         Hello world!
       </div>
-    )
+    );
   }
 }
