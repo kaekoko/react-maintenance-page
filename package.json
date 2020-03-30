@@ -4,9 +4,9 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --entry ./test --output-path ./dist",
     "build": "rm -rf ./lib && tsc",
-    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}'",
+    "dev": "webpack-dev-server --entry ./test --output-path ./dist",
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}'",
     "prepare": "npm run lint && npm run build"
   },
   "husky": {
