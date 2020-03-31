@@ -2,7 +2,7 @@
   "name": "maintenance-page",
   "version": "1.0.0",
   "description": "",
-  "main": "build/index.js",
+  "main": "build/src/index.js",
   "scripts": {
     "dev": "webpack-dev-server --entry ./test --output-path ./dist",
     "prepare": "npm run compile",
