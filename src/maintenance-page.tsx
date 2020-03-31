@@ -23,14 +23,29 @@ export class MaintenancePage extends React.Component<
     return (
       <div
         style={{
-          backgroundColor: '#000',
           height: '100%',
           width: '100%',
           position: 'fixed',
-          color: '#fff',
+          display: 'flex',
+          flexFlow: 'column nowrap',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
-        Hello world!
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            flexWrap: 'nowrap',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <span>WE ARE COMING SOON</span>
+          <div>
+            <h3>The website under maintenance!</h3>
+          </div>
+        </div>
       </div>
     );
   }
