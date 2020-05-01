@@ -30,15 +30,17 @@ replace `script` with following commands
 
 `fix`: Automatic fix Google Typescript Style
 
-`compile`: Compile `/src` code to `/dist`
+`compile`: Compile `/src` codes to `/build`
 
-`publish`: Publish package to NPM
+`publish`: Publish the package to NPM
 
 ## Project structures
 
-`/src` : Codes that will compile to /dist and publish to package manager. These will compile using Typescript cli.
+`/src` : Codes that will compile to /build and publish to package manager. These will compile using Typescript cli.
 
-`/test` : Contain codes for test and dev only. These will compile using Webpack for live reload.
+`/test` : Contain codes for test and dev only. These will compile using Webpack for live reload to /dist.
+
+`/design` : Design files contains images and Inkscape SVG.
 
 ## Todos
 
@@ -47,3 +49,5 @@ replace `script` with following commands
 ## Links
 
 <https://blog.logrocket.com/comparing-the-top-js-animation-libraries-for-use-in-react-apps-2/>
+<https://stackoverflow.com/questions/44717164/unable-to-import-svg-files-in-typescript>
+<https://stackoverflow.com/questions/48704770/webpack-is-not-copying-images-to-dist-folder>

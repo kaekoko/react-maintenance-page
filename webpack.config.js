@@ -1,5 +1,5 @@
 const path = require("path");
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: "development",
@@ -29,7 +29,7 @@ module.exports = {
   resolve: {
     // Add ".ts" and ".tsx" as resolvable extensions.
     // Add ".js" for webpack-dev-server
-    extensions: [".ts", ".tsx", ".js", ".png"],
+    extensions: [".ts", ".tsx", ".js"],
   },
 
   module: {
@@ -51,10 +51,12 @@ module.exports = {
       },
       // File loader for webpack to import images
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [{
           loader: 'file-loader',
-          options: {}
+          options: {
+            jsx: true
+          }
         }]
       }
     ]
