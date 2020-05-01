@@ -27,29 +27,37 @@ module.exports = {
   },
 
   resolve: {
-      // Add ".ts" and ".tsx" as resolvable extensions.
-      // Add ".js" for webpack-dev-server
-      extensions: [".ts", ".tsx", ".js"],
+    // Add ".ts" and ".tsx" as resolvable extensions.
+    // Add ".js" for webpack-dev-server
+    extensions: [".ts", ".tsx", ".js", ".png"],
   },
 
   module: {
-      rules: [
+    rules: [
+      {
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        use: [
           {
-              test: /\.ts(x?)$/,
-              exclude: /node_modules/,
-              use: [
-                  {
-                      loader: "ts-loader"
-                  }
-              ]
-          },
-          // All output ".js" files will have any sourcemaps re-processed by "source-map-loader".
-          {
-              enforce: "pre",
-              test: /\.js$/,
-              loader: "source-map-loader"
+            loader: "ts-loader"
           }
-      ]
+        ]
+      },
+      // All output ".js" files will have any sourcemaps re-processed by "source-map-loader".
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+      },
+      // File loader for webpack to import images
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {}
+        }]
+      }
+    ]
   },
 
   // When importing a module whose path matches one of the following, just
@@ -57,7 +65,7 @@ module.exports = {
   // This is important because it allows us to avoid bundling all of our
   // dependencies, which allows browsers to cache those libraries between builds.
   externals: {
-      "react": "React",
-      "react-dom": "ReactDOM"
+    "react": "React",
+    "react-dom": "ReactDOM"
   }
 };

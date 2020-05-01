@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ReactElement } from 'react';
 
 export interface MaintenancePageProps {
   color: string;
@@ -41,6 +42,7 @@ export class MaintenancePage extends React.Component<
             justifyContent: 'center',
           }}
         >
+          {this.props.children}
           <span>WE ARE COMING SOON</span>
           <div>
             <h3>The website under maintenance!</h3>
