@@ -43,10 +43,6 @@ export class MaintenancePage extends React.Component<
           }}
         >
           {this.props.children}
-          <span>WE ARE COMING SOON</span>
-          <div>
-            <h3>The website under maintenance!</h3>
-          </div>
         </div>
       </div>
     );

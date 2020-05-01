@@ -11,7 +11,8 @@
     "compile": "tsc -p .",
     "fix": "gts fix",
     "pretest": "npm run compile",
-    "posttest": "npm run check"
+    "posttest": "npm run check",
+    "publish": "npm publish --access=public"
   },
   "husky": {
     "hooks": {

@@ -2,20 +2,37 @@
 
 The default maintenance page for React project create by Hotcode team
 
-## How to use
+## Required dependencies
 
-### Requirements
+`react` 16.12.0 or above
 
-"react": "^16.12.0",
-"react-dom": "^16.12.0"
+`react-dom` 16.12.0 or above
 
-### Installation
+## Installation
+
+for NPM version
 
 `npm install @hotcode/maintenance-page`
 
-or
+for Github version
 
-`npm install hotcode-dev/maintenance-page`
+`npm install @hotcode/maintenance-page:hotcode-dev/maintenance-page`
+
+## Commands
+
+`npm run {script}`
+
+replace `script` with following commands
+
+`dev`: Run Webpack server and Live reload
+
+`check`: Check Google Typescript Style
+
+`fix`: Automatic fix Google Typescript Style
+
+`compile`: Compile `/src` code to `/dist`
+
+`publish`: Publish package to NPM
 
 ## Project structures
 
@@ -25,11 +42,8 @@ or
 
 ## Todos
 
-Add middle children props
-
-Add animation background for SVG image with Anime.js or Three.js
+- Add animation background for SVG image with Anime.js
 
 ## Links
 
 <https://blog.logrocket.com/comparing-the-top-js-animation-libraries-for-use-in-react-apps-2/>
-https://www.libhunt.com/
