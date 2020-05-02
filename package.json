@@ -12,7 +12,8 @@
     "fix": "gts fix",
     "pretest": "npm run compile",
     "posttest": "npm run check",
-    "publish:npm": "npm publish --access=public"
+    "publish:npm": "npm publish --access=public",
+    "svg": "npx @svgr/cli < src/assets/constructions.svg > src/assets/constructions.tsx"
   },
   "husky": {
     "hooks": {
@@ -32,9 +33,7 @@
   "homepage": "https://github.com/hotcode-dev/maintenance-page#readme",
   "peerDependencies": {
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-three-fiber": "^4.1.4",
-    "three": "^0.116.1"
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -46,6 +45,8 @@
     "file-loader": "^6.0.0",
     "gts": "^1.1.2",
     "husky": "^4.2.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.2",
     "typescript": "~3.7.0",
@@ -54,9 +55,6 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-three-fiber": "^4.1.4",
-    "three": "^0.116.1"
+    "animejs": "^3.2.0"
   }
 }
