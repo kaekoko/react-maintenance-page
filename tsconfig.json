@@ -8,11 +8,12 @@
       "DOM",
       "DOM.Iterable",
       "ESNext"
-    ]
+    ],
+    "target": "es6",
+		"moduleResolution": "node",
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.svg"
   ]
 }
