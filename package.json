@@ -8,12 +8,12 @@
     "prepare": "npm run compile",
     "check": "gts check",
     "clean": "gts clean",
-    "compile": "tsc -p . && npm run copy:assets",
+    "compile": "tsc -p .",
     "fix": "gts fix",
     "pretest": "npm run compile",
     "posttest": "npm run check",
     "publish:npm": "npm publish --access=public",
-    "copy:assets": "cpx 'src/assets/**' 'build/src/assets'"
+    "svg": "npx @svgr/cli < src/assets/constructions.svg > src/assets/constructions.tsx"
   },
   "husky": {
     "hooks": {
@@ -38,10 +38,10 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@svgr/cli": "^5.4.0",
     "@types/node": "^10.0.3",
     "@types/react": "^16.9.27",
     "@types/react-dom": "^16.9.5",
-    "cpx": "^1.5.0",
     "file-loader": "^6.0.0",
     "gts": "^1.1.2",
     "husky": "^4.2.3",

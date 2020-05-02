@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Constructions from './assets/constructions.svg';
+import { Constructions } from './assets/constructions';
 
 export interface MaintenancePageProps {
   color: string;
@@ -22,7 +22,7 @@ export class MaintenancePage extends React.Component<
 
   render() {
     return (
-      <div
+      <Constructions
         style={{
           height: '100%',
           width: '100%',
@@ -31,7 +31,6 @@ export class MaintenancePage extends React.Component<
           flexFlow: 'column nowrap',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundImage: `url(${Constructions})`,
         }}
       >
         <div
@@ -45,7 +44,7 @@ export class MaintenancePage extends React.Component<
         >
           {this.props.children}
         </div>
-      </div>
+      </Constructions>
     );
   }
 }
