@@ -7,7 +7,6 @@ const logo = require('./assets/test-company.png');
 
 ReactDOM.render(
   <MaintenancePage color="red">
-    <img src={String(logo)} alt="logo" />
     <span>WE ARE COMING SOON</span>
     <div>
       <h3>The website under maintenance!</h3>
