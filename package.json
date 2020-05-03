@@ -13,7 +13,7 @@
     "pretest": "npm run compile",
     "posttest": "npm run check",
     "publish:npm": "npm publish --access=public",
-    "svg": "npx @svgr/cli < src/assets/constructions.svg > src/assets/constructions.tsx"
+    "svg": "npx @svgr/cli --config-file .svgrrc.json --typescript src/assets/constructions.svg > src/assets/constructions.tsx"
   },
   "husky": {
     "hooks": {
@@ -33,7 +33,8 @@
   "homepage": "https://github.com/hotcode-dev/maintenance-page#readme",
   "peerDependencies": {
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "animejs": "^3.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -42,6 +43,7 @@
     "@types/node": "^10.0.3",
     "@types/react": "^16.9.27",
     "@types/react-dom": "^16.9.5",
+    "animejs": "^3.2.0",
     "file-loader": "^6.0.0",
     "gts": "^1.1.2",
     "husky": "^4.2.3",
@@ -54,7 +56,5 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "dependencies": {
-    "animejs": "^3.2.0"
-  }
+  "dependencies": {}
 }

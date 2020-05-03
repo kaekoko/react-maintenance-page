@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Constructions } from './assets/constructions';
+import { SvgConstructions } from './assets/constructions';
 
 export interface MaintenancePageProps {
   color: string;
@@ -22,7 +22,7 @@ export class MaintenancePage extends React.Component<
 
   render() {
     return (
-      <Constructions
+      <SvgConstructions
         style={{
           height: '100%',
           width: '100%',
@@ -44,7 +44,7 @@ export class MaintenancePage extends React.Component<
         >
           {this.props.children}
         </div>
-      </Constructions>
+      </SvgConstructions>
     );
   }
 }

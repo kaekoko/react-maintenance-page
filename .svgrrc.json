@@ -1,0 +1,15 @@
+{
+  "svgoConfig": {
+    "plugins": [
+      {
+        "cleanupIDs": false 
+      },
+      {
+        "prefixIds": false
+      },
+      {
+        "removeUselessDefs": false
+      }
+    ]
+  }
+}
