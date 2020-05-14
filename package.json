@@ -1,7 +1,7 @@
 {
-  "name": "@hotcode/maintenance-page",
+  "name": "@hotcode/react-maintenance-page",
   "version": "1.0.3",
-  "description": "default maintenance page for Hotcode company",
+  "description": "Default react maintenance page for Hotcode company",
   "main": "build/src/index.js",
   "scripts": {
     "dev": "webpack-dev-server --entry ./test --output-path ./dist",
@@ -23,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hotcode-dev/maintenance-page.git"
+    "url": "git+https://github.com/hotcode-dev/react-maintenance-page.git"
   },
   "author": "hotcode",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hotcode-dev/maintenance-page/issues"
+    "url": "https://github.com/hotcode-dev/react-maintenance-page/issues"
   },
-  "homepage": "https://github.com/hotcode-dev/maintenance-page#readme",
+  "homepage": "https://github.com/hotcode-dev/react-maintenance-page#readme",
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
